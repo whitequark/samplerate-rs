@@ -1,0 +1,28 @@
+[package]
+authors = ["whitequark <whitequark@whitequark.org>",
+           "Erik de Castro Lopo <erikd@mega-nerd.com>"]
+name = "samplerate-sys"
+description = "FFI bindings to libsamplerate aka Secret Rabbit Code"
+version = "0.1.9+0"
+license = "BSD-2-clause"
+homepage = "http://www.mega-nerd.com/SRC/"
+repository = "https://github.com/whitequark/samplerate-rs/"
+documentation = "https://docs.rs/samplerate-sys/"
+keywords = ["bindings", "audio", "resampling"]
+categories = ["api-bindings", "multimedia::audio"]
+
+edition = "2018"
+build = "build.rs"
+links = "samplerate"
+
+[lib]
+name = "samplerate_sys"
+
+[features]
+system = []
+
+[dependencies]
+libc = { version = "0.2", default-features = false }
+
+[build-dependencies]
+cc = "1.0"

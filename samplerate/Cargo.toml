@@ -1,0 +1,19 @@
+[package]
+authors = ["whitequark <whitequark@whitequark.org>"]
+name = "samplerate"
+description = "Idiomatic bindings to libsamplerate aka Secret Rabbit Code"
+version = "0.1.0"
+license = "BSD-2-clause"
+homepage = "http://www.mega-nerd.com/SRC/"
+repository = "https://github.com/whitequark/libsamplerate-rs/"
+documentation = "https://docs.rs/libsamplerate-sys/"
+keywords = ["bindings", "audio", "resampling"]
+categories = ["api-bindings", "multimedia::audio"]
+
+[lib]
+name = "samplerate"
+
+[dependencies]
+libc = { version = "0.2", default-features = false }
+samplerate-sys = { version = "0.1", path = "../samplerate-sys" }
+sdl2 = { version = "0.32", optional = true }
